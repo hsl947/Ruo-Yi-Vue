@@ -1,8 +1,21 @@
 <template>
   <div class="navbar">
-    <hamburger id="hamburger-container" :is-active="appStore.sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
-    <breadcrumb id="breadcrumb-container" class="breadcrumb-container" v-if="!settingsStore.topNav" />
-    <top-nav id="topmenu-container" class="topmenu-container" v-if="settingsStore.topNav" />
+    <hamburger
+      id="hamburger-container"
+      :is-active="appStore.sidebar.opened"
+      class="hamburger-container"
+      @toggleClick="toggleSideBar"
+    />
+    <breadcrumb
+      id="breadcrumb-container"
+      class="breadcrumb-container"
+      v-if="!settingsStore.topNav"
+    />
+    <top-nav
+      id="topmenu-container"
+      class="topmenu-container"
+      v-if="settingsStore.topNav"
+    />
 
     <div class="right-menu">
       <template v-if="appStore.device !== 'mobile'">
@@ -23,7 +36,11 @@
         </el-tooltip>
       </template>
       <div class="avatar-container">
-        <el-dropdown @command="handleCommand" class="right-menu-item hover-effect" trigger="click">
+        <el-dropdown
+          @command="handleCommand"
+          class="right-menu-item hover-effect"
+          trigger="click"
+        >
           <div class="avatar-wrapper">
             <img :src="userStore.avatar" class="user-avatar" />
             <el-icon><caret-bottom /></el-icon>
@@ -33,7 +50,10 @@
               <router-link to="/user/profile">
                 <el-dropdown-item>个人中心</el-dropdown-item>
               </router-link>
-              <el-dropdown-item command="setLayout" v-if="settingsStore.showSettings">
+              <el-dropdown-item
+                command="setLayout"
+                v-if="settingsStore.showSettings"
+              >
                 <span>布局设置</span>
               </el-dropdown-item>
               <el-dropdown-item divided command="logout">
@@ -71,14 +91,14 @@ function toggleSideBar() {
 
 function handleCommand(command) {
   switch (command) {
-    case "setLayout":
-      setLayout();
-      break;
-    case "logout":
-      logout();
-      break;
+    case 'setLayout':
+      setLayout()
+      break
+    case 'logout':
+      logout()
+      break
     default:
-      break;
+      break
   }
 }
 
@@ -87,20 +107,22 @@ function logout() {
     confirmButtonText: '确定',
     cancelButtonText: '取消',
     type: 'warning'
-  }).then(() => {
-    userStore.logOut().then(() => {
-      location.href = '/index';
+  })
+    .then(() => {
+      userStore.logOut().then(() => {
+        location.href = '/index'
+      })
     })
-  }).catch(() => { });
+    .catch(() => {})
 }
 
 const emits = defineEmits(['setLayout'])
 function setLayout() {
-  emits('setLayout');
+  emits('setLayout')
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .navbar {
   height: 50px;
   overflow: hidden;

@@ -118,11 +118,17 @@
               >
             </p>
             <p>
-              <i class="el-icon-user-solid"></i> QQ群：<s> 满937441 </s> <s> 满887144332 </s>
-              <s> 满180251782 </s> <s> 满104180207 </s> <s> 满186866453 </s> <s> 满201396349 </s>
-              <s> 满101456076 </s> <s> 满101539465 </s> <s> 满264312783 </s> <s> 满167385320 </s> 
-              <s> 满104748341 </s> <s> 满160110482 </s> <s> 满170801498 </s> <s> 满108482800 </s> 
-              <s> 满101046199 </s> <s> 满136919097 </s> <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=0vBbSb0ztbBgVtn3kJS-Q4HUNYwip89G&authKey=8irq5PhutrZmWIvsUsklBxhj57l%2F1nOZqjzigkXZVoZE451GG4JHPOqW7AW6cf0T&noverify=0&group_code=143961921" target="_blank">143961921</a>
+              <i class="el-icon-user-solid"></i> QQ群：<s> 满937441 </s>
+              <s> 满887144332 </s> <s> 满180251782 </s> <s> 满104180207 </s>
+              <s> 满186866453 </s> <s> 满201396349 </s> <s> 满101456076 </s>
+              <s> 满101539465 </s> <s> 满264312783 </s> <s> 满167385320 </s>
+              <s> 满104748341 </s> <s> 满160110482 </s> <s> 满170801498 </s>
+              <s> 满108482800 </s> <s> 满101046199 </s> <s> 满136919097 </s>
+              <a
+                href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=0vBbSb0ztbBgVtn3kJS-Q4HUNYwip89G&authKey=8irq5PhutrZmWIvsUsklBxhj57l%2F1nOZqjzigkXZVoZE451GG4JHPOqW7AW6cf0T&noverify=0&group_code=143961921"
+                target="_blank"
+                >143961921</a
+              >
             </p>
             <p>
               <i class="el-icon-chat-dot-round"></i> 微信：<a
@@ -220,7 +226,9 @@
                 <li>修复table中更多按钮切换主题色未生效修复问题</li>
                 <li>修复某些特性的环境生成代码变乱码TXT文件问题</li>
                 <li>修复代码生成图片/文件/单选时选择必填无法校验问题</li>
-                <li>修复某些特性的情况用户编辑对话框中角色和部门无法修改问题</li>
+                <li>
+                  修复某些特性的情况用户编辑对话框中角色和部门无法修改问题
+                </li>
                 <li>其他细节优化</li>
               </ol>
             </el-collapse-item>
@@ -281,7 +289,9 @@
                 <li>新增获取不带后缀文件名称方法</li>
                 <li>新增获取配置文件中的属性值方法</li>
                 <li>新增内容编码/解码方便插件集成使用</li>
-                <li>字典类型必须以字母开头，且只能为（小写字母，数字，下滑线）</li>
+                <li>
+                  字典类型必须以字母开头，且只能为（小写字母，数字，下滑线）
+                </li>
                 <li>优化设置分页参数默认值</li>
                 <li>优化对空字符串参数处理的过滤</li>
                 <li>优化显示顺序orderNum类型为整型</li>
@@ -485,8 +495,12 @@
                 <li>BLOB下载时清除URL对象引用</li>
                 <li>代码生成导入表按创建时间排序</li>
                 <li>修复代码生成页面数据编辑保存之后总是跳转第一页的问题</li>
-                <li>修复带safari浏览器无法格式化utc日期格式yyyy-MM-dd'T'HH:mm:ss.SSS问题</li>
-                <li>多图上传组件移除多余的api地址&验证失败导致图片删除问题&无法删除相应图片修复</li>
+                <li>
+                  修复带safari浏览器无法格式化utc日期格式yyyy-MM-dd'T'HH:mm:ss.SSS问题
+                </li>
+                <li>
+                  多图上传组件移除多余的api地址&验证失败导致图片删除问题&无法删除相应图片修复
+                </li>
                 <li>其他细节优化</li>
               </ol>
             </el-collapse-item>
@@ -531,7 +545,9 @@
             </el-collapse-item>
             <el-collapse-item title="v3.5.0 - 2021-05-25">
               <ol>
-                <li>新增菜单导航显示风格TopNav（false为左侧导航菜单，true为顶部导航菜单）</li>
+                <li>
+                  新增菜单导航显示风格TopNav（false为左侧导航菜单，true为顶部导航菜单）
+                </li>
                 <li>布局设置支持保存&重置配置</li>
                 <li>修复树表数据显示不全&加载慢问题</li>
                 <li>新增IE浏览器版本过低提示页面</li>
@@ -550,7 +566,9 @@
                 <li>升级druid到最新版本v1.2.6</li>
                 <li>升级mybatis到最新版3.5.6 阻止远程代码执行漏洞</li>
                 <li>升级oshi到最新版本v5.6.0</li>
-                <li>velocity剔除commons-collections版本，防止3.2.1版本的反序列化漏洞</li>
+                <li>
+                  velocity剔除commons-collections版本，防止3.2.1版本的反序列化漏洞
+                </li>
                 <li>数据监控页默认账户密码防止越权访问</li>
                 <li>修复firefox下表单构建拖拽会新打卡一个选项卡</li>
                 <li>修正后端导入表权限标识</li>
@@ -932,7 +950,7 @@
             <img
               src="@/assets/images/pay.png"
               alt="donate"
-              style="width:100%"
+              style="width: 100%"
             />
             <span style="display: inline-block; height: 30px; line-height: 30px"
               >你可以请作者喝杯咖啡表示鼓励</span
@@ -975,7 +993,7 @@ function goTarget(url) {
     margin: 0;
   }
 
-  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   color: #676a6c;
   overflow-x: hidden;
@@ -1015,4 +1033,3 @@ function goTarget(url) {
   }
 }
 </style>
-
