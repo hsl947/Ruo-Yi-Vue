@@ -28,7 +28,7 @@ module.exports = {
       }
     },
     {
-      files: ['src/**/*.vue'],
+      files: ['src/**/*.vue', 'src/**/*.js'],
       rules: { 'vue/multi-word-component-names': 'off' }
     }
   ],
@@ -45,7 +45,8 @@ module.exports = {
     'no-console': 'off',
     'no-debugger': 'off',
     'vue/no-mutating-props': 'off',
-    'vue/require-valid-default-prop': 'off'
+    'vue/require-valid-default-prop': 'off',
+    'vue/valid-define-emits': 'off'
   },
   globals: {
     defineEmits: 'readonly'

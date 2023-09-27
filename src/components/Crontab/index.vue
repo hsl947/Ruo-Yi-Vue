@@ -172,7 +172,7 @@ const emit = defineEmits(['hide', 'fill'])
 const props = defineProps({
   hideComponent: {
     type: Array,
-    default: () => [],
+    default: () => []
   },
   expression: {
     type: String,
@@ -181,7 +181,9 @@ const props = defineProps({
 })
 const tabTitles = ref(['秒', '分钟', '小时', '日', '月', '周', '年'])
 const tabActive = ref(0)
+// eslint-disable-next-line vue/no-dupe-keys
 const hideComponent = ref([])
+// eslint-disable-next-line vue/no-dupe-keys
 const expression = ref('')
 const crontabValueObj = ref({
   second: '*',
@@ -190,23 +192,13 @@ const crontabValueObj = ref({
   day: '*',
   month: '*',
   week: '?',
-  year: '',
+  year: ''
 })
 const crontabValueString = computed(() => {
   const obj = crontabValueObj.value
-  return obj.second
-    ' ' +
-    obj.min +
-    ' ' +
-    obj.hour +
-    ' ' +
-    obj.day +
-    ' ' +
-    obj.month +
-    ' ' +
-    obj.week +
-    (obj.year === '' ? '' : ' ' + obj.year)
-  )
+  return `${obj.second} ${obj.min} ${obj.hour} ${obj.day} ${obj.month} ${
+    obj.week
+  } ${obj.year === '' ? '' : ' ' + obj.year}`
 })
 watch(expression, () => resolveExp())
 function shouldHide(key) {
@@ -228,7 +220,7 @@ function resolveExp() {
         year: arr[6] ? arr[6] : ''
       }
       crontabValueObj.value = {
-        ...obj,
+        ...obj
       }
     }
   } else {
@@ -273,7 +265,7 @@ function clearCron() {
     day: '*',
     month: '*',
     week: '?',
-    year: '',
+    year: ''
   }
 }
 onMounted(() => {

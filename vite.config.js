@@ -1,3 +1,10 @@
+/*
+ * @Author: Shaoli
+ * @Date: 2023-09-12 16:05:38
+ * @LastEditors: Shaoli
+ * @LastEditTime: 2023-09-12 16:52:45
+ * @Description: 请填写文件描述
+ */
 import { defineConfig, loadEnv } from 'vite'
 import path from 'path'
 import createVitePlugins from './vite/plugins'
@@ -25,7 +32,7 @@ export default defineConfig(({ mode, command }) => {
     },
     // vite 相关配置
     server: {
-      port: 80,
+      port: 8080,
       host: true,
       open: true,
       proxy: {

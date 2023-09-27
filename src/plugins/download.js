@@ -1,3 +1,10 @@
+/*
+ * @Author: Shaoli
+ * @Date: 2023-09-12 16:05:38
+ * @LastEditors: Shaoli
+ * @LastEditTime: 2023-09-12 16:39:24
+ * @Description: 请填写文件描述
+ */
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import { saveAs } from 'file-saver'
@@ -51,10 +58,10 @@ export default {
     })
   },
   zip(url, name) {
-    var url = baseURL + url
+    var aurl = baseURL + url
     axios({
       method: 'get',
-      url: url,
+      url: aurl,
       responseType: 'blob',
       headers: { Authorization: 'Bearer ' + getToken() }
     }).then((res) => {

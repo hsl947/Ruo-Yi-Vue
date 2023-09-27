@@ -1,3 +1,10 @@
+/*
+ * @Author: Shaoli
+ * @Date: 2023-09-12 16:05:38
+ * @LastEditors: Shaoli
+ * @LastEditTime: 2023-09-14 16:16:03
+ * @Description: 请填写文件描述
+ */
 import router from './router'
 import { ElMessage } from 'element-plus'
 import NProgress from 'nprogress'
@@ -11,7 +18,9 @@ import usePermissionStore from '@/store/modules/permission'
 
 NProgress.configure({ showSpinner: false })
 
-const whiteList = ['/login', '/register']
+const extraWL = ['/index']
+
+const whiteList = ['/login', '/register', ...extraWL]
 
 router.beforeEach((to, from, next) => {
   NProgress.start()

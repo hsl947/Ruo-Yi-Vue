@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-deprecated-filter -->
 <template>
   <div>
     <template v-for="(item, index) in options">

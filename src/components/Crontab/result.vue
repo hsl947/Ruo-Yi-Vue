@@ -1,3 +1,4 @@
+<!-- eslint-disable -->
 <template>
   <div class="popup-result">
     <p class="title">最近5次运行时间</p>
@@ -117,7 +118,7 @@ function expressionChange() {
     // 如果到达最大值时
     if (nMonth > MDate[MDate.length - 1]) {
       resetMonth()
-      continue;
+      continue
     }
     // 循环月份数组
     goMonth: for (let Mi = MIdx; Mi < MDate.length; Mi++) {
@@ -187,13 +188,16 @@ function expressionChange() {
           let thisWeek = formatDate(
             new Date(YY + '-' + MM + '-' + thisDD + ' 00:00:00'),
             'week'
+          )
           // 当星期日时
           if (thisWeek === 1) {
             // 先找下一个日，并判断是否为月底
             DD++
             thisDD = DD < 10 ? '0' + DD : DD
             // 判断下一日已经不是合法日期
-            if (checkDate(YY + '-' + MM + '-' + thisDD + ' 00:00:00') !== true) {
+            if (
+              checkDate(YY + '-' + MM + '-' + thisDD + ' 00:00:00') !== true
+            ) {
               DD -= 3
             }
           } else if (thisWeek === 7) {
@@ -210,6 +214,7 @@ function expressionChange() {
           let thisWeek = formatDate(
             new Date(YY + '-' + MM + '-' + DD + ' 00:00:00'),
             'week'
+          )
           // 校验当前星期是否在星期池（dayRuleSup）中
           if (dayRuleSup.value.indexOf(thisWeek) < 0) {
             // 如果到达最大值时
@@ -229,6 +234,7 @@ function expressionChange() {
           let thisWeek = formatDate(
             new Date(YY + '-' + MM + '-' + DD + ' 00:00:00'),
             'week'
+          )
           if (dayRuleSup.value[1] >= thisWeek) {
             DD =
               (dayRuleSup.value[0] - 1) * 7 + dayRuleSup.value[1] - thisWeek + 1
@@ -250,6 +256,7 @@ function expressionChange() {
           let thisWeek = formatDate(
             new Date(YY + '-' + MM + '-' + thisDD + ' 00:00:00'),
             'week'
+          )
           // 找到要求中最近的那个星期几
           if (dayRuleSup.value < thisWeek) {
             DD -= thisWeek - dayRuleSup.value
@@ -561,6 +568,7 @@ function formatDate(value, type) {
       (m < 10 ? '0' + m : m) +
       ':' +
       (s < 10 ? '0' + s : s)
+    )
   } else if (type === 'week') {
     // 在quartz中 1为星期日
     return week + 1

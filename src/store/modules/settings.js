@@ -1,3 +1,10 @@
+/*
+ * @Author: Shaoli
+ * @Date: 2023-09-12 16:05:38
+ * @LastEditors: Shaoli
+ * @LastEditTime: 2023-09-12 16:41:51
+ * @Description: 请填写文件描述
+ */
 import defaultSettings from '@/settings'
 import { useDynamicTitle } from '@/utils/dynamicTitle'
 
@@ -42,6 +49,7 @@ const useSettingsStore = defineStore('settings', {
     // 修改布局设置
     changeSetting(data) {
       const { key, value } = data
+      // eslint-disable-next-line no-prototype-builtins
       if (this.hasOwnProperty(key)) {
         this[key] = value
       }

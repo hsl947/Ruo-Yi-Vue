@@ -1,3 +1,10 @@
+/*
+ * @Author: Shaoli
+ * @Date: 2023-09-12 16:05:38
+ * @LastEditors: Shaoli
+ * @LastEditTime: 2023-09-12 16:31:08
+ * @Description: 请填写文件描述
+ */
 /**
  * 判断url是否是http或https
  * @param {string} path
@@ -68,7 +75,7 @@ export function validAlphabets(str) {
  */
 export function validEmail(email) {
   const reg =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   return reg.test(email)
 }
 

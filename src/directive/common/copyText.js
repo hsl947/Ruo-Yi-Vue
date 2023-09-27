@@ -48,7 +48,9 @@ function copyTextToClipboard(input, { target = document.body } = {}) {
   let isSuccess = false
   try {
     isSuccess = document.execCommand('copy')
-  } catch {}
+  } catch (e) {
+    console.log(e)
+  }
 
   element.remove()
 
